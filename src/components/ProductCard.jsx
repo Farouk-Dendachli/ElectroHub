@@ -1,4 +1,4 @@
-const ProductCard = ({ image, title, price, specs }) => {
+const ProductCard = ({ image, title, price, specs, onAddToCart }) => {
   return (
     <div className="card h-100 border-0 shadow-sm">
       <div className="ratio ratio-4x3 bg-white">
@@ -14,8 +14,14 @@ const ProductCard = ({ image, title, price, specs }) => {
             </li>
           ))}
         </ul>
-        <button type="button" className="btn btn-dark rounded-pill mt-auto w-100">
-          Buy Now
+        <button
+          type="button"
+          className="btn btn-dark rounded-pill mt-auto w-100"
+          onClick={() =>
+            onAddToCart && onAddToCart({ title, price, image, specs })
+          }
+        >
+          Add to Cart
         </button>
       </div>
     </div>
