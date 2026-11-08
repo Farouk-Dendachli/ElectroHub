@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="row align-items-center">
           <div className="col-md-6 text-center text-md-start">
             <p className="text-muted small mb-0">
-              © 2026 ElectroHub — Farouk Dendachli - project Phase 2
+              © 2026 ElectroHub — Farouk Dendachli - project Phase 1
             </p>
           </div>
           <div className="col-md-6 text-center text-md-end mt-2 mt-md-0">

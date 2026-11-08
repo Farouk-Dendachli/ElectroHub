@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
 
-const Home = () => {
+const Home = ({ onAddToCart }) => {
   const newestProducts = products
     .map((product, index) => {
       if (index < 4) {
@@ -55,6 +55,7 @@ const Home = () => {
                 title={product.title}
                 price={product.price}
                 specs={product.specs}
+                onAddToCart={onAddToCart}
               />
             </div>
           ))}

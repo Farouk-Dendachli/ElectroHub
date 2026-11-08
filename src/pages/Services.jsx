@@ -2,7 +2,7 @@ import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { products } from "../data/products";
 
-const Services = () => {
+const Services = ({ onAddToCart }) => {
   const [filter, setFilter] = useState("All");
 
   const categories = ["All", "Laptops", "Phones", "Accessories"];
@@ -59,6 +59,7 @@ const Services = () => {
               title={product.title}
               price={product.price}
               specs={product.specs}
+              onAddToCart={onAddToCart}
             />
           </div>
         ))}
